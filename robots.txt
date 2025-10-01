@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow crawling of sensitive directories
+Disallow: /scripts/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.git/
+Disallow: /.netlify/
+
+# Allow crawling of assets
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://singular-pothos-6ef461.netlify.app/sitemap.xml
+
+# Crawl delay (optional - helps prevent overloading)
+Crawl-delay: 1

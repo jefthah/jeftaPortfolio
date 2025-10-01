@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Portfolio Page -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://singular-pothos-6ef461.netlify.app/assets/images/home-images/me-final.png</image:loc>
+      <image:title>Jefta Supraja - Full Stack Developer</image:title>
+      <image:caption>Professional photo of Jefta Supraja, Full Stack Developer from Jakarta</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://singular-pothos-6ef461.netlify.app/assets/images/home-images/logoJeftaWhite.png</image:loc>
+      <image:title>Jefta Supraja Logo</image:title>
+      <image:caption>Professional logo of Jefta Supraja</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Home Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#home</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#about</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Services Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#services</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Portfolio Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#portfolio</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Resume Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#resume</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/#contact</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Resume PDF -->
+  <url>
+    <loc>https://singular-pothos-6ef461.netlify.app/assets/pdf/myResume.pdf</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
