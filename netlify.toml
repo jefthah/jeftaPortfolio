@@ -4,12 +4,10 @@
   
   # Folder yang akan di-deploy
   publish = "dist"
-  
-  # Node.js version
-  environment = { NODE_VERSION = "18" }
 
+# Environment variables untuk build
 [build.environment]
-  # Build environment variables - Netlify akan menggunakan dari UI
+  NODE_VERSION = "18"
   NETLIFY_BUILD = "true"
 
 # Headers untuk security
