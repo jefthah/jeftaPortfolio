@@ -1,30 +1,36 @@
 User-agent: *
 Allow: /
 
-# Allow all search engines to crawl the site
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow crawling of sensitive directories
-Disallow: /scripts/
-Disallow: /.env
-Disallow: /node_modules/
-Disallow: /package.json
-Disallow: /package-lock.json
-Disallow: /.git/
-Disallow: /.netlify/
-
-# Allow crawling of assets
-Allow: /assets/
-
 # Sitemap location
 Sitemap: https://singular-pothos-6ef461.netlify.app/sitemap.xml
 
-# Crawl delay (optional - helps prevent overloading)
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+# Allow all important pages
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/javascript/
+Allow: /assets/pdf/
+
+# Disallow private files
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /.netlify/
+
+# Allow social media bots
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Additional SEO directives
+# This robots.txt helps search engines find and index
+# Jefta Supraja's portfolio website effectively

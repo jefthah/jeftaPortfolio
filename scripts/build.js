@@ -18,7 +18,10 @@ async function build() {
       'index.html',
       'assets',
       'netlify.toml',
-      'vercel.json'
+      'vercel.json',
+      'sitemap.xml',
+      'robots.txt',
+      'google1d194bff08215c4d.html'
     ];
     
     for (const file of filesToCopy) {
