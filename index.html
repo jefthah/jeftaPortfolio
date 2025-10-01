@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jefta Supraja - Full Stack Developer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/home-images/logoJeftaWhite.png" />
+    <link rel="stylesheet" href="assets/css/swap.css" />
+    <link rel="stylesheet" href="assets/css/fancybox.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media_query.css" />
+    
+    <style>
+      /* Hide projects by default, show only first 2 */
+      .gallery-item:nth-child(n+3) {
+        display: none;
+      }
+      
+      /* Show more button hover effect */
+      #showMoreBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+      }
+      
+      /* Certificate section improvements */
+      .section-five {
+        padding: 120px 0 80px 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        margin-top: 0;
+      }
+      
+      .section-five .testimonial {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .section-five h3 {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding-top: 20px;
+        position: relative;
+        z-index: 10;
+      }
+      
+      .section-five .testimonial-box:first-child {
+        margin-top: 20px;
+      }
+      
+      .section-five .testimonial-box {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: visible;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 500px;
+        max-height: 500px;
+        height: 500px;
+      }
+      
+      .testimonial-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+      }
+      
+      .testimonial-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 107, 107, 0.3);
+      }
+      
+      .section-five .testimonial-box a {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: 250px;
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+      }
+      
+      .section-five .testimonial-box a:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+      
+      .section-five .client-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      
+      .section-five .slider-text-group {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 150px;
+      }
+      
+      .section-five .am-text-main {
+        margin-bottom: 15px;
+        position: relative;
+        text-align: center;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .section-five .am-text-main p {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
+        line-height: 1.2;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+      
+      .section-five .am-text-main img {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 25px;
+        height: 25px;
+        opacity: 0.7;
+      }
+      
+      .section-five .Neque {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #cccccc;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+        min-height: 60px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      
+      .section-five .client-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .section-five .client-name span {
+        color: #cccccc;
+        font-weight: 500;
+      }
+      
+      /* Section title styling */
+      .section-title {
+        margin: 60px 0 40px;
+        text-align: center;
+      }
+      
+      .section-title .line {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ff6b6b, #4ecdc4, transparent);
+        flex: 1;
+      }
+      
+      .section-title .title-box {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0 30px;
+        white-space: nowrap;
+      }
+      
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .section-five {
+          padding: 100px 0 60px 0;
+        }
+        
+        .section-five .testimonial {
+          padding: 30px 15px 0 15px;
+          gap: 25px;
+        }
+        
+        .section-five h3 {
+          margin-bottom: 30px;
+          padding-top: 15px;
+        }
+        
+        .section-five .testimonial-box {
+          padding: 20px;
+          min-height: 450px;
+          max-height: 450px;
+          height: 450px;
+        }
+        
+        .section-five .testimonial-box a {
+          max-width: 100%;
+          height: 200px;
+        }
+        
+        .section-five .slider-text-group {
+          min-height: 120px;
+        }
+        
+        .section-five .am-text-main p {
+          font-size: 1.5rem;
+          padding: 0 15px;
+          word-break: break-word;
+        }
+        
+        .section-five .Neque {
+          font-size: 0.9rem;
+          min-height: 50px;
+          padding: 0 15px;
+          line-height: 1.3;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .section-five {
+          padding: 80px 0 40px 0;
+        }
+        
+        .section-five .testimonial {
+          padding: 20px 15px 0 15px;
+        }
+        
+        .section-five h3 {
+          margin-bottom: 25px;
+          padding-top: 10px;
+        }
+        
+        .section-five .testimonial-box {
+          padding: 15px;
+          min-height: 400px;
+          max-height: 400px;
+          height: 400px;
+        }
+        
+        .section-five .testimonial-box a {
+          height: 180px;
+        }
+        
+        .section-five .slider-text-group {
+          min-height: 100px;
+        }
+        
+        .section-five .am-text-main p {
+          font-size: 1.3rem;
+          padding: 0 20px;
+          word-break: break-word;
+          line-height: 1.1;
+        }
+        
+        .section-five .Neque {
+          font-size: 0.8rem;
+          min-height: 40px;
+          padding: 0 20px;
+          line-height: 1.2;
+        }
+      }
+      
+      /* Extra small mobile devices */
+      @media (max-width: 360px) {
+        .section-five .am-text-main p {
+          font-size: 1.1rem;
+          padding: 0 25px;
+          line-height: 1.0;
+        }
+        
+        .section-five .Neque {
+          font-size: 0.75rem;
+          min-height: 35px;
+          padding: 0 25px;
+          line-height: 1.1;
+        }
+        
+        .section-five .testimonial-box {
+          padding: 10px;
+        }
+      }
+      
+      /* Send Button Styling */
+      #sendBtn {
+        background: linear-gradient(135deg, #ff6b6b, #4ecdc4) !important;
+        border: none !important;
+        color: white !important;
+        padding: 15px 30px !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        font-size: 1.1rem !important;
+        transition: all 0.3s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        cursor: pointer !important;
+      }
+      
+      #sendBtn:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4) !important;
+        background: linear-gradient(135deg, #ff5252, #26c6da) !important;
+      }
+      
+      #sendBtn:active {
+        transform: translateY(-1px) !important;
+      }
+      
+      #sendBtn:disabled {
+        opacity: 0.7 !important;
+        cursor: not-allowed !important;
+        transform: none !important;
+      }
+      
+      #sendBtn img {
+        width: 20px !important;
+        height: 20px !important;
+        filter: brightness(0) invert(1) !important;
+        transition: transform 0.3s ease !important;
+      }
+      
+      #sendBtn:hover img {
+        transform: translateX(5px) !important;
+      }
+      
+      /* Loading state for send button */
+      #sendBtn.loading {
+        pointer-events: none !important;
+      }
+      
+      #sendBtn.loading::after {
+        content: '' !important;
+        position: absolute !important;
+        width: 20px !important;
+        height: 20px !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        border-top: 2px solid white !important;
+        border-radius: 50% !important;
+        animation: spin 1s linear infinite !important;
+        right: 20px !important;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Success message styling */
+      .success-message {
+        background: linear-gradient(135deg, #4caf50, #8bc34a);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        animation: slideIn 0.5s ease;
+      }
+      
+      /* Error message styling */
+      .error-message {
+        background: linear-gradient(135deg, #f44336, #e53935);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+        animation: slideIn 0.5s ease;
+      }
+      
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="dark-mode">
+    <!-- ====================================== Preloader ===================================== -->
+    <!-- <div class="preloader">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="loade-svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-main">
+            <div class="loading">
+                <span data-text="L">L</span>
+                <span data-text="O">O</span>
+                <span data-text="A">A</span>
+                <span data-text="D">D</span>
+                <span data-text="I">I</span>
+                <span data-text="N">N</span>
+                <span data-text="G">G</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- ====================================== Background Animation ===================================== -->
+    <canvas id="canvas"></canvas>
+    <!-- ====================================== Background Animation End ===================================== -->
+    <div class="site-containe">
+      <!-- ====================================== Header ===================================== -->
+      <div class="container" id="mainHeader">
+        <header>
+          <a href="index.html" class="main-header-logo">
+            <img class="logo" src="assets/images/home-images/logoJeftaWhite.png" alt="Jefta Supraja Logo" />
+          </a>
+          <div class="jeftaBtn-toggle-main mt-0">
+            <ul class="side-menu-ul" id="menu-list-header">
+              <li class="menu-btn">
+                <a href="#home">HOME</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#about">ABOUT</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#services">SERVICES</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#portfolio">PORTFOLIO</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#testimonial">TESTIMONIAL</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#resume">RESUME</a>
+              </li>
+              <li class="menu-btn">
+                <a href="#contact">CONTACT</a>
+              </li>
+            </ul>
+            <button id="menu-toggle" class="menu-toggle-button">
+              <span class="hamburger" id="hamburger-1">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </span>
+            </button>
+          </div>
+        </header>
+      </div>
+      <!-- ====================================== Side Menu ===================================== -->
+      <div class="container">
+        <div class="row main-row">
+          <div class="col-xxl-3 col-xl-3 col-lg-4">
+            <div class="side-menu-main">
+              <a href="index.html" class="side-menu-two-logo">
+                <img class="logo" src="assets/images/home-images/logoJeftaWhite.png" alt="Jefta Supraja Logo" />
+              </a>
+              <div class="portfolio-girl-menu-main">
+                <img
+                  src="assets/images/home-images/me-final.png"
+                  alt="portfolio-girl-menu"
+                />
+              </div>
+              <div class="list-menu">
+                <p class="side-menu-jefta">Jefta Supraja</p>
+                <p class="web-jefta">Full Stack & Web Developer</p>
+                <div class="media-main">
+                  <a
+                    href="https://github.com/jefthah"
+                    class="media-icons"
+                    aria-label="GitHub"
+                  >
+                    <img
+                      class="icon-img"
+                      src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"
+                      alt="GitHub"
+                      width="24"
+                      height="24"
+                    />
+                  </a>
+
+                  <style>
+                    .icon-img {
+                      filter: invert(1) brightness(1.2);
+                    } /* jadi putih */
+                  </style>
+
+                  <a
+                    href="https://www.instagram.com/jefta_supraja/"
+                    class="media-icons"
+                  >
+                    <img src="assets/images/svg/insta.svg" alt="insta" />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@jeftasupraja6732"
+                    class="media-icons"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="icon-img"
+                      src="https://cdn.jsdelivr.net/npm/simple-icons/icons/youtube.svg"
+                      alt="YouTube"
+                      width="24"
+                      height="24"
+                    />
+                  </a>
+
+                  <style>
+                    .icon-img {
+                      filter: invert(1) brightness(1.4);
+                    } /* jadi putih */
+                    .media-icons:hover .icon-img {
+                      filter: none;
+                    } /* contoh: balik ke hitam saat hover */
+                  </style>
+
+                  <a
+                    href="https://www.linkedin.com/in/jefta-supraja-925805286/"
+                    class="media-icons"
+                  >
+                    <img src="assets/images/svg/linkdin.svg" alt="linkdin" />
+                  </a>
+                </div>
+              </div>
+              <div class="list-menu menu-list-main d-xl-none">
+                <ul class="side-menu-ul">
+                  <li>
+                    <a href="#home"
+                      >HOME<img src="assets/images/svg/home.svg" alt="home"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#about"
+                      >ABOUT ME<img
+                        src="assets/images/svg/about.svg"
+                        alt="about"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#services"
+                      >SERVICES<img
+                        src="assets/images/svg/services.svg"
+                        alt="services"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#portfolio"
+                      >PORTFOLIO<img
+                        src="assets/images/svg/portfolio.svg"
+                        alt="portfolio"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#testimonial"
+                      >TESTIMONIAL<img
+                        src="assets/images/svg/testimonial.svg"
+                        alt="testimonial"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#resume"
+                      >RESUME<img
+                        src="assets/images/svg/resume.svg"
+                        alt="resume"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#contact"
+                      >CONTACT<img
+                        src="assets/images/svg/contact.svg"
+                        alt="contact"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-menu">
+                <p class="phone-text">PHONE:</p>
+                <a href="tel:+(01)5623894336" class="phone-num">
+                  <p>+(62) 851 - 5692 - 4873</p>
+                </a>
+                <p class="phone-text">EMAIL:</p>
+                <a href="mailto:hello@jeftastark.com" class="phone-num">
+                  <p>jefta.supraja@gmail.com</p>
+                </a>
+                <p class="phone-text">LOCATION:</p>
+                <p class="phone-num">DKI Jakarta, Jakarta Barat</p>
+                <div class="Hire-Me-side-menu">
+                  <a href="assets/pdf/myResume.pdf" class="jeftaBtn">
+                    Hire Me!
+                    <img
+                      class="hireMe-svg-side"
+                      src="assets/images/svg/hireMe-svg.svg"
+                      alt="download-svg"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-9 col-xl-9 col-lg-12" data-bs-spy="scroll">
+            <!-- ====================================== Section-One ===================================== -->
+            <section class="section-one active_menus" id="home">
+              <div class="row section-one-row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                  <p class="hi-there fade_down">Hi there! <span>👋</span></p>
+                  <h1 class="creative fade_down">Full Stack Developer.</h1>
+                  <h2 class="visionary fade_down">
+                    Fresh Informatics Engineering graduate interested in
+                    full-stack web development; experienced in building
+                    end-to-end apps, integrating relational/non-relational
+                    databases, prototyping products and visuals, with exposure
+                    to game development; recognized for persistence,
+                    responsibility, collaboration, and curiosity
+                  </h2>
+                  <div class="download-btn">
+                    <a href="assets/pdf/myResume.pdf" class="jeftaBtn">
+                      Download CV
+                      <img
+                        src="assets/images/svg/download-svg.svg"
+                        alt="download-svg"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 portfolio-girl-img-col">
+                  <div class="position-relative zoom_in">
+                    <img
+                      class="portfolio-girl-img"
+                      src="assets/images/home-images/me-final-2.png"
+                      alt="portfolio-girl"
+                    />
+                    <div class="girl-name">
+                      <p class="ityped">I’M jefta Supraja</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section-Two ===================================== -->
+            <section
+              class="section-two overflow-hidden active_menus"
+              id="about"
+            >
+              <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 about-col">
+                  <h2 class="jefta-stack-about fade_down">
+                    <span>I’m</span> Jefta Supraja
+                  </h2>
+                  <p class="WebExperts fade_down">Your Web Experts</p>
+                  <div class="yer-exp-box-main">
+                    <div class="yer-exp-box counter fade_down">
+                      <p class="degit count" data-count="02">0</p>
+                      <div>
+                        <p>+</p>
+                        <p>Years Of Exp.</p>
+                      </div>
+                    </div>
+                    <div class="yer-exp-box counter fade_down">
+                      <p class="degit count" data-count="100">0</p>
+                      <div>
+                        <p>+</p>
+                        <p>Work Hours</p>
+                      </div>
+                    </div>
+                    <div class="yer-exp-box counter fade_down">
+                      <p class="degit count" data-count="10">0</p>
+                      <div>
+                        <p>+</p>
+                        <p>Projects Done</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-7 col-xl-7 col-lg-7 self-taught-col">
+                  <h2 class="self-taught">
+                    Hello! <span>I’m Jefta</span>—a fresh graduate in
+                    Informatics Engineering with a strong interest in
+                    <span>full-stack web development</span>. I design,
+                    prototype, and build end-to-end web products, from idea to
+                    launch.
+                  </h2>
+                  <h2 class="visionary">
+                    I turn ideas into clear, useful digital
+                    experiences—reliable, accessible, and delightful for people
+                    and brands.
+                  </h2>
+
+                  <div class="about-deatils-head fade_down">
+                    <div class="about-detail-main">
+                      <p class="about-detail">Name</p>
+                      <p class="about-detail-info">Jefta Supraja</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Nationality</p>
+                      <p class="about-detail-info">Indonesia</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Phone</p>
+                      <p class="about-detail-info">+(62) 851-5692-4873</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Email</p>
+                      <p class="about-detail-info">jefta.supraja@gmail.com</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Experience</p>
+                      <p class="about-detail-info">2+ Years</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Freelance</p>
+                      <p class="about-detail-info">Available</p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Github</p>
+                      <p class="about-detail-info">
+                        <a href="">github.com/jefthah</a>
+                      </p>
+                    </div>
+                    <div class="about-detail-main">
+                      <p class="about-detail">Language</p>
+                      <p class="about-detail-info">English, Indonesia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section-Three ===================================== -->
+            <section class="section-three active_menus" id="services">
+              <h3 class="creative brand fade_down">
+                I help teams ship reliable web products through thoughtful
+                design, solid engineering, and clear execution.
+              </h3>
+              <h3 class="visionary fade_down">
+                From idea to prototype to launch—turning concepts into fast,
+                usable, and maintainable digital experiences.
+              </h3>
+
+              <div class="services-box fade_down" id="services-box">
+                <div>
+                  <img
+                    class="services-icon"
+                    src="assets/images/svg/web.svg"
+                    alt="web"
+                  />
+                  <p class="web-dev-text">Web Design & Development</p>
+                </div>
+                <p class="visionary">
+                  End-to-end website & app delivery: information architecture,
+                  responsive UI, accessibility, and production-ready builds.
+                </p>
+              </div>
+
+              <div class="services-box fade_down">
+                <div>
+                  <img
+                    class="services-icon"
+                    src="assets/images/svg/UI-design.svg"
+                    alt="UI-design"
+                  />
+                  <p class="web-dev-text">UI Design & Experience</p>
+                </div>
+                <p class="visionary">
+                  Wireframes to high-fidelity prototypes, design systems, and
+                  usability improvements that reduce friction and increase
+                  clarity.
+                </p>
+              </div>
+
+              <div class="services-box fade_down">
+                <div>
+                  <img
+                    class="services-icon"
+                    src="assets/images/svg/digital.svg"
+                    alt="interactions"
+                  />
+                  <p class="web-dev-text">Front-End Interactions & Animation</p>
+                </div>
+                <p class="visionary">
+                  Smooth micro-interactions and scroll-based storytelling with a
+                  focus on performance and accessibility.
+                </p>
+              </div>
+
+              <div class="services-box fade_down">
+                <div>
+                  <img
+                    class="services-icon"
+                    src="assets/images/svg/branding.svg"
+                    alt="backend"
+                  />
+                  <p class="web-dev-text">Back-End & API Integration</p>
+                </div>
+                <p class="visionary">
+                  Authentication, RESTful APIs, file uploads, and database
+                  modeling—cleanly integrated into a maintainable codebase.
+                </p>
+              </div>
+
+              <div class="services-box mb-0 fade_down">
+                <div>
+                  <img
+                    class="services-icon"
+                    src="assets/images/svg/video.svg"
+                    alt="video"
+                  />
+                  <p class="web-dev-text">Content, Video & Launch Assets</p>
+                </div>
+                <p class="visionary">
+                  Product demo edits, social snippets, and visual assets that
+                  support launches and case studies.
+                </p>
+              </div>
+            </section>
+
+            <!-- ====================================== Section-Four ===================================== -->
+            <section class="section-four active_menus" id="portfolio">
+              <h2 class="creative fade_down">Featured Projects</h2>
+              <h2 class="visionary fade_down">
+                Real projects, measurable impact—built with care from idea to
+                delivery
+              </h2>
+              <div class="tab-btn-main fade_down">
+                <a
+                  href="javascript:void(0);"
+                  data-tab="one"
+                  class="jeftaBtn tab-btn tab-active"
+                  >Show All</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  data-tab="two"
+                  class="jeftaBtn tab-btn"
+                  >Student Project</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  data-tab="three"
+                  class="jeftaBtn tab-btn"
+                  >Major Project</a
+                >
+                <!-- <a
+                  href="javascript:void(0);"
+                  data-tab="four"
+                  class="jeftaBtn tab-btn"
+                  >YT Video</a
+                >
+                <a
+                  href="javascript:void(0);"
+                  data-tab="five"
+                  class="jeftaBtn tab-btn"
+                  >Vimeo Video</a
+                > -->
+                <div class="clear"></div>
+              </div>
+              <div class="tabContainer">
+                <div id="one" class="Tabcondent tab-active">
+                  <div class="gallery">
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project1.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Presence System</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Presence System - Full Stack</h3>
+                        <a
+                          href="https://github.com/jefthah"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://www.mypresencesystem.my.id/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project2.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Portfolio</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>
+                          Portfolio + Project Management System - Full Stack MERN
+                        </h3>
+                        <a
+                          href="https://github.com/jefthah/3d-portfolio-spline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://3d-portfolio-spline.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project3.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Spotiflow - Full Stack MERN</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Spotiflow - Full Stack MERN</h3>
+                        <a
+                          href="https://github.com/jefthah/spotify-frontend"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://spotify-frontend-eb2elonk4-killuas-projects-1c3aa2b2.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project4.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">M List Anime - Full Stack</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My List Anime - Full Stack</h3>
+                        <a
+                          href="https://github.com/jefthah/anime-project-service"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://anime-list-deployment.vercel.app/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- Student Project 1 -->
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project5.png"
+                          alt="project-img5"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Portfolio Website</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Portfolio Website</h3>
+                        <a
+                          href="https://github.com/jefthah/my-portfolio-website"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://portfolio-jefthah.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- Student Project 2 -->
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project6.png"
+                          alt="project-img6"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Rating Anime</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Rating Anime</h3>
+                        <a
+                          href="https://github.com/jefthah/rating-anime-basic"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://rating-anime-basic.vercel.app/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- Student Project 3 -->
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project7.png"
+                          alt="project-img7"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">UPN Sehat</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>UPN Sehat</h3>
+                        <a
+                          href="https://github.com/jefthah/project-mobile-final"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <!-- Show More Button -->
+                    <div class="show-more-container" style="text-align: center; margin-top: 30px;">
+                      <button id="showMoreBtn" class="jeftaBtn" style="background: linear-gradient(45deg, #ff6b6b, #ff8e8e); border: none; padding: 12px 30px; border-radius: 25px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                        Show More Projects
+                      </button>
+                    </div>
+
+                    <!-- <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#galleryModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project-img2.jpg"
+                          alt="project-img2.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/gallery-svg.svg"
+                            alt="gallery-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Astronaut Catch Earth</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Astronaut Catch Earth</h3>
+                        <p>Gallery</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item gallery-item3">
+                      <div class="gallery-item-sub youtube">
+                        <img
+                          src="assets/images/home-images/project-img3.jpg"
+                          alt="project-img3.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/youtube-svg.svg"
+                            alt="youtube-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Connect With Future Place</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Connect With Future Place</h3>
+                        <p>YT Video</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div class="gallery-item-sub vimeo">
+                        <img
+                          src="assets/images/home-images/project-img4.jpg"
+                          alt="project-img4.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/vimeo-svg.svg"
+                            alt="vimeo-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Mind Process Chips</h3>
+                        <p>Vimeo Video</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project-img5.jpg"
+                          alt="project-img5.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Pyramids With Illusion</h3>
+                        <p>Content</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#galleryModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project-img6.jpg"
+                          alt="project-img6.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/gallery-svg.svg"
+                            alt="gallery-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Space Shuttle Launch</h3>
+                        <p>Gallery</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item gallery-item3 mb-0">
+                      <div class="gallery-item-sub youtube">
+                        <img
+                          src="assets/images/home-images/project-img7.jpg"
+                          alt="project-img7.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/youtube-svg.svg"
+                            alt="youtube-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Explore Human Minds</h3>
+                        <p>YT Video</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item mb-0">
+                      <div class="gallery-item-sub vimeo">
+                        <img
+                          src="assets/images/home-images/project-img8.jpg"
+                          alt="project-img8.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/vimeo-svg.svg"
+                            alt="vimeo-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Dubai 3D Amazing View</h3>
+                        <p>Vimeo Video</p>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+                <div id="two" class="Tabcondent">
+                  <div class="gallery">
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project5.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Portfolio Website</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Portfolio Website</h3>
+                        <a
+                          href="https://github.com/jefthah/my-portfolio-website"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://portfolio-jefthah.netlify.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project6.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Rating Anime</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Rating Anime</h3>
+                        <a
+                          href="https://github.com/jefthah/rating-anime-basic"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://rating-anime-basic.vercel.app/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project7.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">UPN Sehat</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>UPN Sehat</h3>
+                        <a
+                          href="https://github.com/jefthah/project-mobile-final"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="three" class="Tabcondent">
+                  <div class="gallery flex-nowrap">
+                    <div class="gallery">
+                      <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project1.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My Presence System</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My Presence System - Full Stack</h3>
+                        <a
+                          href="https://github.com/jefthah/my-presence-system"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://www.mypresencesystem.my.id/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project2.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Portfolio</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>
+                          Portfolio + Project Management System - Full Stack MERN
+                        </h3>
+                        <a
+                          href="https://github.com/jefthah/3d-portfolio-spline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://3d-portfolio-spline.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project3.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Spotiflow - Full Stack MERN</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Spotiflow - Full Stack MERN</h3>
+                        <a
+                          href="https://github.com/jefthah/spotify-frontend"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://spotify-frontend-eb2elonk4-killuas-projects-1c3aa2b2.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div
+                        class="gallery-item-sub"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          src="assets/images/home-images/project4.png"
+                          alt="project-img1"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/content-svg.svg"
+                            alt="content-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">My List Anime - Full Stack</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>My List Anime - Full Stack</h3>
+                        <a
+                          href="https://github.com/jefthah/anime-project-service"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                            />
+                          </svg>
+                          <span>Code</span>
+                        </a>
+                        <a
+                          href="https://anime-list-deployment.vercel.app/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="project-link"
+                        >
+                          <svg
+                            class="link-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                            ></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          <span>Live</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                  
+                  </div>
+                </div>
+                <div id="four" class="Tabcondent">
+                  <div class="gallery flex-nowrap">
+                    <div class="gallery-item mb-0">
+                      <div class="gallery-item-sub youtube">
+                        <img
+                          src="assets/images/home-images/project-img3.jpg"
+                          alt="project-img3.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/youtube-svg.svg"
+                            alt="youtube-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Connect With Future Place</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Connect With Future Place</h3>
+                        <p>YT Video</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item mb-0">
+                      <div class="gallery-item-sub youtube">
+                        <img
+                          src="assets/images/home-images/project-img7.jpg"
+                          alt="project-img7.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/youtube-svg.svg"
+                            alt="youtube-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Explore Human Minds</h3>
+                        <p>YT Video</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="five" class="Tabcondent">
+                  <div class="gallery flex-nowrap">
+                    <div class="gallery-item">
+                      <div class="gallery-item-sub vimeo mb-0">
+                        <img
+                          src="assets/images/home-images/project-img4.jpg"
+                          alt="project-img4.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/vimeo-svg.svg"
+                            alt="vimeo-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Mind Process Chips</h3>
+                        <p>Vimeo Video</p>
+                      </div>
+                    </div>
+                    <div class="gallery-item mb-0">
+                      <div class="gallery-item-sub vimeo">
+                        <img
+                          src="assets/images/home-images/project-img8.jpg"
+                          alt="project-img8.jpg"
+                        />
+                        <div class="overlay">
+                          <img
+                            src="assets/images/svg/vimeo-svg.svg"
+                            alt="vimeo-svg"
+                            class="vimeo-icon"
+                          />
+                          <p class="overlay-text">Mind Process Chips</p>
+                        </div>
+                      </div>
+                      <div class="gallery-info">
+                        <h3>Dubai 3D Amazing View</h3>
+                        <p>Vimeo Video</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Content Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <img
+                          class="content-img"
+                          src="assets/images/home-images/content-img.jpg"
+                          alt="content-img"
+                        />
+                        <p class="spce-in-text">Space In Lost - Jupiter J2</p>
+                        <p class="spce-in-Content">Content</p>
+                        <div class="corporate_main">
+                          <div class="cuberto_main">
+                            <p class="created_by">Created By :</p>
+                            <p class="cuberto">Cuberto</p>
+                          </div>
+                          <div class="cuberto_main">
+                            <p class="created_by">Date :</p>
+                            <p class="cuberto">20/12/2024</p>
+                          </div>
+                          <div class="cuberto_main">
+                            <p class="created_by">Client :</p>
+                            <p class="cuberto">Rayan Patrick</p>
+                          </div>
+                          <div class="cuberto_main">
+                            <p class="created_by">Categories :</p>
+                            <p class="cuberto">Content</p>
+                          </div>
+                        </div>
+                        <p class="ipsum mb-2">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Fuga consequatur delectus porro sapiente
+                          molestias, magni quasi sed, enim corporis omnis
+                          doloremque soluta inventore dolorum conseqr quo
+                          obcaecati rerum sit non. Lorem ipsum dolor, sit amet
+                          consectetur adipisicing elit. Fuga consequatur
+                          delectus porro sapiente molestias, magni quasi sed,
+                          enim corporis omnis doloremque soluta inventore
+                          dolorum consequuntur quo obcaecati rerum sit non.
+                        </p>
+                        <p class="ipsum">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Fuga consequatur delectus porro sapiente
+                          molestias, magni quasi sed, enim corporis omnis
+                          doloremque soluta inventore dolorum consetur quo
+                          obcaecati rerum sit non.
+                        </p>
+                        <div class="plumbing-grid">
+                          <img
+                            src="assets/images/home-images/project-img1.jpg"
+                            alt="single-blog-img3"
+                          />
+                          <img
+                            src="assets/images/home-images/project-img4.jpg"
+                            alt="single-blog-img4"
+                          />
+                        </div>
+                        <p class="ipsum">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Fuga consequatur delectus porro sapiente
+                          molestias, magni quasi sed, enim corporis omnis
+                          doloremque soluta inventore dolorum consetur quo
+                          obcaecati rerum sit non.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Gallery Modal -->
+                <div
+                  class="modal fade"
+                  id="galleryModal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="spce-in-text text-gallery">Gallery</p>
+                        <div class="gallery-main-card">
+                          <a
+                            href="assets/images/gallery/gallery-img1.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 1"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img1.jpg"
+                              alt="gallery-img1"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img2.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 2"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img2.jpg"
+                              alt="gallery-img2"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img3.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 3"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img3.jpg"
+                              alt="gallery-img3"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img4.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 4"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img4.jpg"
+                              alt="gallery-img4"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img5.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 5"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img5.jpg"
+                              alt="gallery-img5"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img6.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 6"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img6.jpg"
+                              alt="gallery-img6"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img7.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 7"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img7.jpg"
+                              alt="gallery-img5"
+                            />
+                          </a>
+                          <a
+                            href="assets/images/gallery/gallery-img8.jpg"
+                            data-fancybox="gallery"
+                            data-caption="Caption Images 8"
+                          >
+                            <img
+                              src="assets/images/gallery/gallery-img8.jpg"
+                              alt="gallery-img8"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section-Five ===================================== -->
+            <section class="section-five active_menus" id="testimonial">
+              <h3 class="creative brand fade_down">
+                Certification
+              </h3>
+              <div class="testimonial zoom_in">
+                <div class="testimonial-box">
+                  <a href="assets/images/home-images/sertifikat1.png" data-fancybox="certificates" data-caption="Data Analytics Certificate">
+                    <img
+                      class="client-img"
+                      src="assets/images/home-images/sertifikat1.png"
+                      alt="Certificate 1"
+                    />
+                  </a>
+                  <div class="slider-text-group">
+                    <div class="am-text-main">
+                      <p>Data Analytics!</p>
+                      <img src="assets/images/svg/qote.svg" alt="qote" />
+                    </div>
+                    <p class="Neque">
+                      Sertifikat Data Analytics dari IT Specialist yang membuktikan kemampuan dalam analisis data dan visualization menggunakan tools modern.
+                    </p>
+                    <p class="client-name">
+                      IT Specialist<span>  Pearson</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <a href="assets/images/home-images/sertifikat2.png" data-fancybox="certificates" data-caption="Java Foundations Certificate">
+                    <img
+                      class="client-img"
+                      src="assets/images/home-images/sertifikat2.png"
+                      alt="Certificate 2"
+                    />
+                  </a>
+                  <div class="slider-text-group">
+                    <div class="am-text-main">
+                      <p>Java Foundations!</p>
+                      <img src="assets/images/svg/qote.svg" alt="qote" />
+                    </div>
+                    <p class="Neque">
+                      Sertifikat Java Foundations dari Oracle Academy yang menunjukkan penguasaan fundamental programming Java dan object-oriented programming.
+                    </p>
+                    <p class="client-name">
+                      Oracle Academy <span>(Java Foundations)</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <a href="assets/images/home-images/sertifikat3.png" data-fancybox="certificates" data-caption="Web Development Certificate">
+                    <img
+                      class="client-img"
+                      src="assets/images/home-images/sertifikat3.png"
+                      alt="Certificate 3"
+                    />
+                  </a>
+                  <div class="slider-text-group">
+                    <div class="am-text-main">
+                      <p>Web Development!</p>
+                      <img src="assets/images/svg/qote.svg" alt="qote" />
+                    </div>
+                    <p class="Neque">
+                      Sertifikat Web Development dari program pelatihan yang mencakup HTML, CSS, JavaScript, dan framework modern untuk pengembangan web.
+                    </p>
+                    <p class="client-name">
+                      OK OCE Jakarta <span>(Web Developer)</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-box">
+                  <a href="assets/images/home-images/sertifikat4.png" data-fancybox="certificates" data-caption="JavaScript Fundamentals Certificate">
+                    <img
+                      class="client-img"
+                      src="assets/images/home-images/sertifikat4.png"
+                      alt="Certificate 4"
+                    />
+                  </a>
+                  <div class="slider-text-group">
+                    <div class="am-text-main">
+                      <p>JavaScript Fundamentals!</p>
+                      <img src="assets/images/svg/qote.svg" alt="qote" />
+                    </div>
+                    <p class="Neque">
+                      Sertifikat JavaScript Fundamentals dari GreatStack yang memvalidasi kemampuan dalam JavaScript programming dan modern web development.
+                    </p>
+                    <p class="client-name">GreatStack <span>(JavaScript Course)</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="section-title">
+                <div class="line"></div>
+                <div class="title-box">MY Sertification From</div>
+                <div class="line"></div>
+              </div>
+              <div class="logos logos2">
+                <div class="logos-slide">
+                  <div class="marquee__content">
+                    <div class="marquee-img-main">
+                      <img
+                        class="brand-logos"
+                        src="assets/images/home-images/bwa-logo.png"
+                        alt="client-logo1"
+                      />
+                    </div>
+                    <div class="marquee-img-main">
+                      <img
+                        class="brand-logos"
+                        src="assets/images/home-images/greatstack-logo.png"
+                        alt="client-logo2"
+                      />
+                    </div>
+                    <div class="marquee-img-main">
+                      <img
+                        class="brand-logos"
+                        src="assets/images/home-images/certiport-logo.png"
+                        alt="client-logo3"
+                      />
+                    </div>
+                    <div class="marquee-img-main">
+                      <img
+                        class="brand-logos"
+                        src="assets/images/home-images/kampus-merdeka-logo.png"
+                        alt="client-logo4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section-Six ===================================== -->
+            <section class="section-six active_menus" id="resume">
+              <div class="row resume-sec-row">
+                <div class="col-xxl-6 col-lg-6">
+                  <h2 class="creative brand fade_up">Education</h2>
+                  <div class="education fade_up">
+                    <div class="side_circle_ring">
+                      <div class="small_yellow_border">
+                        <div class="small_yellow_circle"></div>
+                      </div>
+                    </div>
+                    <div class="small_yellow_border_main">
+                      <p class="bachelor">Bachelor’s Degree in Information Technology</p>
+                      <p class="cursus university">
+                        Universitas Pembangunan Nasional Veteran Jakarta / 2021 - 2024
+                      </p>
+                      <p class="cursus">
+                        Eu nulla at mauris cursus consectetur posuere iaculis
+                        ipsum neque. Morbi felis pellentesque ligula sed
+                        dictumst.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="education position-relative fade_up">
+                    <div class="side_circle_ring">
+                      <div class="small_yellow_border">
+                        <div class="small_yellow_circle"></div>
+                      </div>
+                    </div>
+                    <div class="small_yellow_border_main">
+                      <p class="bachelor">English First</p>
+                      <p class="cursus university">
+                        EF Frontrunner / 2018 - 2020
+                      </p>
+                      <p class="cursus">
+                        Porttitor euismod at semper ut massa. Lorem varius magna
+                        volutpat nunc. Et faucibus scelerisque donec eleifenda.
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-xxl-6 col-lg-6">
+                  <h2 class="creative brand fade_up">Experience.</h2>
+                  <div class="education fade_up">
+                    <div class="side_circle_ring">
+                      <div class="small_yellow_border">
+                        <div class="small_yellow_circle"></div>
+                      </div>
+                    </div>
+                    <div class="small_yellow_border_main">
+                      <p class="bachelor">Website and Sosial Media Developer Intern</p>
+                      <p class="cursus university">OK OCE Indonesia / 2023 - 2024</p>
+                      <p class="cursus">
+                        Ipsum erat duis leo lectus tellus neque dictumst.
+                        Dignissim tortor quis nisl mi lectus facilisis ac eget.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="education position-relative fade_up">
+                    <div class="side_circle_ring">
+                      <div class="small_yellow_border">
+                        <div class="small_yellow_circle"></div>
+                      </div>
+                    </div>
+                    <div class="small_yellow_border_main">
+                      <p class="bachelor">KSM Multimedia Web Developer</p>
+                      <p class="cursus university">Apple / 2019 - 2020</p>
+                      <p class="cursus">
+                        Congue dolor gravida eu tristique netus posuere dolor.
+                        Penatibus imperdiet egestas ut sit scelerisque sapien a.
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="coding-skill-section">
+                <h2 class="creative brand pb-0 fade_down">
+                  Top <span>Skills</span>
+                </h2>
+                <div id="progress">
+                  <div
+                    class="progress-item fade_down"
+                    data-skill="React"
+                    data-value="80"
+                  ></div>
+                  <div
+                    class="progress-item fade_down"
+                    data-skill="Next"
+                    data-value="75"
+                  ></div>
+                  <div
+                    class="progress-item fade_down"
+                    data-skill="JavaScript"
+                    data-value="85"
+                  ></div>
+                  <div
+                    class="progress-item fade_down"
+                    data-skill="HTML"
+                    data-value="90"
+                  ></div>
+                  <div
+                    class="progress-item fade_down"
+                    data-skill="CSS"
+                    data-value="90"
+                  ></div>
+                </div>
+              </div>
+              <div class="coding-skill-section">
+                <h2 class="creative brand pb-0 fade_down">
+                  Design <span>Skills</span>
+                </h2>
+                <div class="design-skill-sub-section">
+                  <div class="design-skills-img-main flip_up show">
+                    <img
+                      src="assets/images/home-images/figma-img.png"
+                      alt="figma-img"
+                    />
+                    <div class="skill-counter-main">
+                      <p>90%</p>
+                      <p>FIGMA</p>
+                    </div>
+                  </div>
+                  <div class="design-skills-img-main photoshop flip_up show">
+                    <img
+                      src="assets/images/home-images/photoshop-img.png"
+                      alt="photoshop-img"
+                    />
+                    <div class="skill-counter-main photoshop-text">
+                      <p>90%</p>
+                      <p>PHOTOSHOP</p>
+                    </div>
+                  </div>
+                  <div class="design-skills-img-main adobe-xd flip_up show">
+                    <img
+                      src="assets/images/home-images/adobe-xd-img.png"
+                      alt="adobe-xd-img"
+                    />
+                    <div class="skill-counter-main adobe-xd-text">
+                      <p>88%</p>
+                      <p>ADOBE XD</p>
+                    </div>
+                  </div>
+                  <div class="design-skills-img-main sketch flip_up show">
+                    <img
+                      src="assets/images/home-images/sktech-img.png"
+                      alt="sktech-img"
+                    />
+                    <div class="skill-counter-main sketch-text">
+                      <p>85%</p>
+                      <p>SKETCH</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Awards section removed as requested -->
+            </section>
+            <!-- ====================================== Section Seven ===================================== -->
+            <section class="section-nine active_menus" id="contact">
+              <h3 class="creative brand fade_down">
+                Let’s Talk <span> With Us</span>
+              </h3>
+              <h3 class="visionary fade_down">
+                We are the top creative agency for branding corp. We offer a
+                full range of services to help clients improve their search
+                engine rankings and drive more traffic to their websites.
+              </h3>
+              <div class="contact-box-grid">
+                <div class="contact-sec-box zoom_in">
+                  <p class="call-us-contact">
+                    <img
+                      class="call-us-contact-img"
+                      src="assets/images/svg/call.svg"
+                      alt="call"
+                    />
+                    Call Us
+                  </p>
+                  <p class="day-time">Monday to Friday 8:30 - 17:00</p>
+                  <a href="tel:+6285156924873" class="call-num">
+                    <p>(+62) 851 - 5692 - 4873</p>
+                  </a>
+                </div>
+                <div class="contact-sec-box zoom_in">
+                  <p class="call-us-contact">
+                    <img
+                      class="call-us-contact-img"
+                      src="assets/images/svg/email.svg"
+                      alt="call"
+                    />
+                    Chat to Us
+                  </p>
+                  <p class="day-time">Our friendly team is here to help.</p>
+                  <a href="mailto:jefta.supraja@gmail.com" class="call-num">
+                    <p>jefta.supraja@gmail.com</p>
+                  </a>
+                </div>
+              </div>
+              <!-- Map removed as requested -->
+              <h3 class="creative brand got">
+                Got Ideas? <span> We've got the skills</span>
+              </h3>
+              <h3 class="visionary">
+                We are the top creative agency for branding corp. We offer a
+                full range of services to help clients improve their search
+                engine rankings and drive more traffic to their websites.
+              </h3>
+              <form id="contactForm">
+                <div class="input-main">
+                  <div class="labal-input">
+                    <p class="labal">NAME*</p>
+                    <input
+                      type="text"
+                      placeholder="Your Full Name"
+                      name="name"
+                      id="contact-name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="labal-input">
+                    <p class="labal">EMAIL*</p>
+                    <input
+                      type="email"
+                      placeholder="Your Email Address"
+                      name="email"
+                      id="contact-email"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="input-main">
+                  <div class="labal-input">
+                    <p class="labal">SUBJECT*</p>
+                    <input
+                      type="text"
+                      placeholder="Your Subject"
+                      name="subject"
+                      id="contact-subject"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="input-main">
+                  <div class="labal-input">
+                    <p class="labal">MESSAGE*</p>
+                    <textarea
+                      placeholder="Write Your Message..."
+                      name="message"
+                      id="contact-message"
+                      rows="4"
+                      autocomplete="off"
+                      style="width: 100%; border: 2px dashed var(--primary-color); border-radius: 20px; padding: 10px 20px; background: transparent; color: var(--main-text);"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="download-btn">
+                  <button type="submit" id="sendBtn" class="jeftaBtn">
+                    Send Message
+                    <img src="assets/images/svg/right-arrow.svg" alt="right-arrow" />
+                  </button>
+                </div>
+              </form>
+            </section>
+            <!-- ====================================== Footer ===================================== -->
+            <footer>
+              <div class="rights-reserved">
+                <h2>
+                  © 2024 - All rights reserved by
+                  <a
+                    href="#"
+                    target="_blank"
+                    >Jefta Supraja</a
+                  >
+                </h2>
+                <div class="home-media-icon-main-head">
+                  <a href="#" target="_blank">Terms & Conditions</a>
+                  <a href="#" target="_blank">Privacy Policy</a>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================== Bottom To Top Button ===================================== -->
+    <button class="bottom-top-button">
+      <img src="assets/images/svg/arrow-up.svg" alt="arrow-up" />
+    </button>
+    <!-- ====================================== Bottom To Top Button End ===================================== -->
+    <script src="assets/javascript/jquery.min.js"></script>
+    <script src="assets/javascript/gsap.js"></script>
+    <script src="assets/javascript/bootstrap.min.js"></script>
+    <script src="assets/javascript/magnific-popup.min.js"></script>
+    <script src="assets/javascript/fancybox.min.js"></script>
+    <script src="assets/javascript/typing.js"></script>
+    <script src="assets/javascript/smooth-scroll.js"></script>
+    <script src="assets/javascript/slick.min.js"></script>
+    <script src="assets/javascript/bg-animation/circle.js"></script>
+    <!-- EmailJS SDK (optional; remove if not using EmailJS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Environment Configuration -->
+    <script src="assets/javascript/config.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    
+    <script>
+      // Show More Projects functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const galleryItems = document.querySelectorAll('#one .gallery-item');
+        let visibleCount = 2; // Show first 2 projects by default
+        
+        if (showMoreBtn && galleryItems.length > 2) {
+          showMoreBtn.addEventListener('click', function() {
+            // Show next 2 projects
+            for (let i = visibleCount; i < visibleCount + 2 && i < galleryItems.length; i++) {
+              galleryItems[i].style.display = 'block';
+            }
+            
+            visibleCount += 2;
+            
+            // Hide button if all projects are shown
+            if (visibleCount >= galleryItems.length) {
+              showMoreBtn.style.display = 'none';
+            }
+          });
+        } else if (galleryItems.length <= 2) {
+          // Hide button if there are 2 or fewer projects
+          if (showMoreBtn) {
+            showMoreBtn.style.display = 'none';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

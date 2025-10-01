@@ -1,0 +1,38 @@
+[build]
+  # Build command untuk Netlify
+  command = "npm run build"
+  
+  # Folder yang akan di-deploy
+  publish = "dist"
+  
+  # Node.js version
+  environment = { NODE_VERSION = "18" }
+
+[build.environment]
+  # Build environment variables - Netlify akan menggunakan dari UI
+  NETLIFY_BUILD = "true"
+
+# Headers untuk security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content Security Policy untuk EmailJS
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.emailjs.com https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net;"
+    
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Redirect rules
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Error pages
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,24 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="28" fill="#fff" stroke="#333" stroke-width="2"/>
+  
+  <!-- Letter J -->
+  <path d="M18 15 L18 35 Q18 40 23 40 Q28 40 28 35 L28 30" 
+        stroke="#333" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+  
+  <!-- Letter S -->
+  <path d="M35 22 Q35 18 39 18 Q43 18 43 22 Q43 26 39 28 Q35 30 35 34 Q35 38 39 38 Q43 38 43 34" 
+        stroke="#333" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"/>
+  
+  <!-- Text "Jefta Supraja" -->
+  <text x="70" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Jefta</text>
+  <text x="70" y="40" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Supraja</text>
+</svg>
