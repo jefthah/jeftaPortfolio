@@ -343,7 +343,13 @@ body.dark-mode .hireMe-svg-side {
 }
 /* New Menu End */
 .main-header-logo {
-    display: none;
+    display: block;
+}
+
+.main-header-logo .logo {
+    width: 120px;
+    height: auto;
+    max-width: 120px;
 }
 .menu-toggle-button {
     display: none;
