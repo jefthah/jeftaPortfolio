@@ -569,6 +569,44 @@
           transform: translateY(-20px);
         }
       }
+
+      /* Header logo sizing */
+      header .main-header-logo .logo {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+
+      /* Side menu logo sizing */
+      .side-menu-two-logo .logo {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+      }
+
+      /* Language toggle styles */
+      .lang-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 12px;
+      }
+      .lang-toggle .lang-btn {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #ffffff;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .lang-toggle .lang-btn.active,
+      .lang-toggle .lang-btn:hover {
+        background: #ff6b6b;
+        border-color: #ff6b6b;
+        color: #fff;
+      }
     </style>
   </head>
 
@@ -603,27 +641,31 @@
           <div class="jeftaBtn-toggle-main mt-0">
             <ul class="side-menu-ul" id="menu-list-header">
               <li class="menu-btn">
-                <a href="#home">HOME</a>
+                <a href="#home" data-i18n="nav.home">HOME</a>
               </li>
               <li class="menu-btn">
-                <a href="#about">ABOUT</a>
+                <a href="#about" data-i18n="nav.about">ABOUT</a>
               </li>
               <li class="menu-btn">
-                <a href="#services">SERVICES</a>
+                <a href="#services" data-i18n="nav.services">SERVICES</a>
               </li>
               <li class="menu-btn">
-                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#portfolio" data-i18n="nav.portfolio">PORTFOLIO</a>
               </li>
               <li class="menu-btn">
-                <a href="#testimonial">TESTIMONIAL</a>
+                <a href="#testimonial" data-i18n="nav.testimonial">TESTIMONIAL</a>
               </li>
               <li class="menu-btn">
-                <a href="#resume">RESUME</a>
+                <a href="#resume" data-i18n="nav.resume">RESUME</a>
               </li>
               <li class="menu-btn">
-                <a href="#contact">CONTACT</a>
+                <a href="#contact" data-i18n="nav.contact">CONTACT</a>
               </li>
             </ul>
+            <div class="lang-toggle" aria-label="Language Toggle">
+              <button class="lang-btn" data-lang="id" id="btn-lang-id">IND</button>
+              <button class="lang-btn" data-lang="en" id="btn-lang-en">ENG</button>
+            </div>
             <button id="menu-toggle" class="menu-toggle-button">
               <span class="hamburger" id="hamburger-1">
                 <span class="line"></span>
@@ -650,7 +692,7 @@
               </div>
               <div class="list-menu">
                 <p class="side-menu-jefta">Jefta Supraja</p>
-                <p class="web-jefta">Full Stack & Web Developer</p>
+                <p class="web-jefta" data-i18n="profile.title">Full Stack & Web Developer</p>
                 <div class="media-main">
                   <a
                     href="https://github.com/jefthah"
@@ -764,19 +806,19 @@
                 </ul>
               </div>
               <div class="list-menu">
-                <p class="phone-text">PHONE:</p>
+                <p class="phone-text" data-i18n="contact.phone">PHONE:</p>
                 <a href="tel:+(01)5623894336" class="phone-num">
                   <p>+(62) 851 - 5692 - 4873</p>
                 </a>
-                <p class="phone-text">EMAIL:</p>
+                <p class="phone-text" data-i18n="contact.email">EMAIL:</p>
                 <a href="mailto:hello@jeftastark.com" class="phone-num">
                   <p>jefta.supraja@gmail.com</p>
                 </a>
-                <p class="phone-text">LOCATION:</p>
+                <p class="phone-text" data-i18n="contact.location">LOCATION:</p>
                 <p class="phone-num">DKI Jakarta, Jakarta Barat</p>
                 <div class="Hire-Me-side-menu">
                   <a href="assets/pdf/myResume.pdf" class="jeftaBtn">
-                    Hire Me!
+                    <span data-i18n="button.hire">Hire Me!</span>
                     <img
                       class="hireMe-svg-side"
                       src="assets/images/svg/hireMe-svg.svg"
@@ -792,9 +834,9 @@
             <section class="section-one active_menus" id="home">
               <div class="row section-one-row">
                 <div class="col-xxl-6 col-xl-6 col-lg-6">
-                  <p class="hi-there fade_down">Hi there! <span>👋</span></p>
-                  <h1 class="creative fade_down">Full Stack Developer.</h1>
-                  <h2 class="visionary fade_down">
+                  <p class="hi-there fade_down" data-i18n="home.greeting">Hi there! <span>👋</span></p>
+                  <h1 class="creative fade_down" data-i18n="home.title">Full Stack Developer.</h1>
+                  <h2 class="visionary fade_down" data-i18n="home.description">
                     Fresh Informatics Engineering graduate interested in
                     full-stack web development; experienced in building
                     end-to-end apps, integrating relational/non-relational
@@ -804,7 +846,7 @@
                   </h2>
                   <div class="download-btn">
                     <a href="assets/pdf/myResume.pdf" class="jeftaBtn">
-                      Download CV
+                      <span data-i18n="button.download">Download CV</span>
                       <img
                         src="assets/images/svg/download-svg.svg"
                         alt="download-svg"
@@ -834,42 +876,42 @@
               <div class="row">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 about-col">
                   <h2 class="jefta-stack-about fade_down">
-                    <span>I’m</span> Jefta Supraja
+                    <span data-i18n="about.im">I'm</span> Jefta Supraja
                   </h2>
-                  <p class="WebExperts fade_down">Your Web Experts</p>
+                  <p class="WebExperts fade_down" data-i18n="about.experts">Your Web Experts</p>
                   <div class="yer-exp-box-main">
                     <div class="yer-exp-box counter fade_down">
                       <p class="degit count" data-count="02">0</p>
                       <div>
                         <p>+</p>
-                        <p>Years Of Exp.</p>
+                        <p data-i18n="stats.years">Years Of Exp.</p>
                       </div>
                     </div>
                     <div class="yer-exp-box counter fade_down">
                       <p class="degit count" data-count="100">0</p>
                       <div>
                         <p>+</p>
-                        <p>Work Hours</p>
+                        <p data-i18n="stats.hours">Work Hours</p>
                       </div>
                     </div>
                     <div class="yer-exp-box counter fade_down">
                       <p class="degit count" data-count="10">0</p>
                       <div>
                         <p>+</p>
-                        <p>Projects Done</p>
+                        <p data-i18n="stats.projects">Projects Done</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-7 self-taught-col">
-                  <h2 class="self-taught">
-                    Hello! <span>I’m Jefta</span>—a fresh graduate in
+                  <h2 class="self-taught" data-i18n="about.intro">
+                    Hello! <span>I'm Jefta</span>—a fresh graduate in
                     Informatics Engineering with a strong interest in
                     <span>full-stack web development</span>. I design,
                     prototype, and build end-to-end web products, from idea to
                     launch.
                   </h2>
-                  <h2 class="visionary">
+                  <h2 class="visionary" data-i18n="about.mission">
                     I turn ideas into clear, useful digital
                     experiences—reliable, accessible, and delightful for people
                     and brands.
@@ -877,38 +919,38 @@
 
                   <div class="about-deatils-head fade_down">
                     <div class="about-detail-main">
-                      <p class="about-detail">Name</p>
+                      <p class="about-detail" data-i18n="detail.name">Name</p>
                       <p class="about-detail-info">Jefta Supraja</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Nationality</p>
+                      <p class="about-detail" data-i18n="detail.nationality">Nationality</p>
                       <p class="about-detail-info">Indonesia</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Phone</p>
+                      <p class="about-detail" data-i18n="detail.phone">Phone</p>
                       <p class="about-detail-info">+(62) 851-5692-4873</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Email</p>
+                      <p class="about-detail" data-i18n="detail.email">Email</p>
                       <p class="about-detail-info">jefta.supraja@gmail.com</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Experience</p>
+                      <p class="about-detail" data-i18n="detail.experience">Experience</p>
                       <p class="about-detail-info">2+ Years</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Freelance</p>
-                      <p class="about-detail-info">Available</p>
+                      <p class="about-detail" data-i18n="detail.freelance">Freelance</p>
+                      <p class="about-detail-info" data-i18n="detail.available">Available</p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Github</p>
+                      <p class="about-detail" data-i18n="detail.github">Github</p>
                       <p class="about-detail-info">
                         <a href="">github.com/jefthah</a>
                       </p>
                     </div>
                     <div class="about-detail-main">
-                      <p class="about-detail">Language</p>
-                      <p class="about-detail-info">English, Indonesia</p>
+                      <p class="about-detail" data-i18n="detail.language">Language</p>
+                      <p class="about-detail-info" data-i18n="detail.languages">English, Indonesia</p>
                     </div>
                   </div>
                 </div>
@@ -916,11 +958,11 @@
             </section>
             <!-- ====================================== Section-Three ===================================== -->
             <section class="section-three active_menus" id="services">
-              <h3 class="creative brand fade_down">
+              <h3 class="creative brand fade_down" data-i18n="services.intro">
                 I help teams ship reliable web products through thoughtful
                 design, solid engineering, and clear execution.
               </h3>
-              <h3 class="visionary fade_down">
+              <h3 class="visionary fade_down" data-i18n="services.subtitle">
                 From idea to prototype to launch—turning concepts into fast,
                 usable, and maintainable digital experiences.
               </h3>
@@ -932,9 +974,9 @@
                     src="assets/images/svg/web.svg"
                     alt="web"
                   />
-                  <p class="web-dev-text">Web Design & Development</p>
+                  <p class="web-dev-text" data-i18n="services.web.title">Web Design & Development</p>
                 </div>
-                <p class="visionary">
+                <p class="visionary" data-i18n="services.web.desc">
                   End-to-end website & app delivery: information architecture,
                   responsive UI, accessibility, and production-ready builds.
                 </p>
@@ -947,9 +989,9 @@
                     src="assets/images/svg/UI-design.svg"
                     alt="UI-design"
                   />
-                  <p class="web-dev-text">UI Design & Experience</p>
+                  <p class="web-dev-text" data-i18n="services.ui.title">UI Design & Experience</p>
                 </div>
-                <p class="visionary">
+                <p class="visionary" data-i18n="services.ui.desc">
                   Wireframes to high-fidelity prototypes, design systems, and
                   usability improvements that reduce friction and increase
                   clarity.
@@ -963,9 +1005,9 @@
                     src="assets/images/svg/digital.svg"
                     alt="interactions"
                   />
-                  <p class="web-dev-text">Front-End Interactions & Animation</p>
+                  <p class="web-dev-text" data-i18n="services.frontend.title">Front-End Interactions & Animation</p>
                 </div>
-                <p class="visionary">
+                <p class="visionary" data-i18n="services.frontend.desc">
                   Smooth micro-interactions and scroll-based storytelling with a
                   focus on performance and accessibility.
                 </p>
@@ -978,9 +1020,9 @@
                     src="assets/images/svg/branding.svg"
                     alt="backend"
                   />
-                  <p class="web-dev-text">Back-End & API Integration</p>
+                  <p class="web-dev-text" data-i18n="services.backend.title">Back-End & API Integration</p>
                 </div>
-                <p class="visionary">
+                <p class="visionary" data-i18n="services.backend.desc">
                   Authentication, RESTful APIs, file uploads, and database
                   modeling—cleanly integrated into a maintainable codebase.
                 </p>
@@ -993,9 +1035,9 @@
                     src="assets/images/svg/video.svg"
                     alt="video"
                   />
-                  <p class="web-dev-text">Content, Video & Launch Assets</p>
+                  <p class="web-dev-text" data-i18n="services.content.title">Content, Video & Launch Assets</p>
                 </div>
-                <p class="visionary">
+                <p class="visionary" data-i18n="services.content.desc">
                   Product demo edits, social snippets, and visual assets that
                   support launches and case studies.
                 </p>
@@ -1004,8 +1046,8 @@
 
             <!-- ====================================== Section-Four ===================================== -->
             <section class="section-four active_menus" id="portfolio">
-              <h2 class="creative fade_down">Featured Projects</h2>
-              <h2 class="visionary fade_down">
+              <h2 class="creative fade_down" data-i18n="portfolio.title">Featured Projects</h2>
+              <h2 class="visionary fade_down" data-i18n="portfolio.subtitle">
                 Real projects, measurable impact—built with care from idea to
                 delivery
               </h2>
@@ -1014,19 +1056,19 @@
                   href="javascript:void(0);"
                   data-tab="one"
                   class="jeftaBtn tab-btn tab-active"
-                  >Show All</a
+                  data-i18n="portfolio.showall">Show All</a
                 >
                 <a
                   href="javascript:void(0);"
                   data-tab="two"
                   class="jeftaBtn tab-btn"
-                  >Student Project</a
+                  data-i18n="portfolio.student">Student Project</a
                 >
                 <a
                   href="javascript:void(0);"
                   data-tab="three"
                   class="jeftaBtn tab-btn"
-                  >Major Project</a
+                  data-i18n="portfolio.major">Major Project</a
                 >
                 <!-- <a
                   href="javascript:void(0);"
@@ -2849,6 +2891,7 @@
     <!-- Environment Configuration -->
     <script src="assets/javascript/config.js"></script>
     <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/i18n.js"></script>
     
     <script>
       // Show More Projects functionality
